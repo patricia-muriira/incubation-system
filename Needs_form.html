@@ -1,0 +1,345 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+
+  
+   
+<style>
+   body {
+      background-color: navy;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+     .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    .form-container {
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      background-color: #F0E9D6;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: navy;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: navy;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+	
+	.button-container {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+
+ 
+</head>
+<body>
+<div class="logo-container">
+    <img src="C:\Users\JHIM\OneDrive\Desktop\ku.png" alt="Kenyatta University Logo">
+  </div>
+  <h1>Kenyatta University</h1>
+  <h2>Innovation Incubation and University Industry Linkages</h2>
+  <h3>Needs Assessment Form</h3>
+
+  <form>
+    <div class="form-container" method="POST">
+      <h4 style="color: black">Personal Details</h4>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+      </div>
+      <div>
+        <label for="student-reg-no">Student Reg. No (if student):</label>
+        <input type="text" id="student-reg-no" name="student-reg-no">
+      </div>
+      <div>
+        <label for="institution">Institution:</label>
+        <input type="text" id="institution" name="institution">
+      </div>
+      <div>
+        <label for="course">Degree/Course Pursuing:</label>
+        <input type="text" id="course" name="course">
+      </div>
+      <div>
+        <label for="id-no">ID NO. (Non student):</label>
+        <input type="text" id="id-no" name="id-no">
+      </div>
+      <div>
+        <label for="skills">Skills towards business:</label>
+        <input type="text" id="skills" name="skills">
+      </div>
+    </div> <br><br>
+
+    <div class="form-container">
+      <h4 style="color: black">Team Member Details</h4>
+      <div class="team-member">
+        <label for="team-member-name">Name:</label>
+        <input type="text" id="team-member-name" name="team-member-name">
+      </div>
+      <div class="team-member">
+        <label for="team-member-email">Email:</label>
+        <input type="email" id="team-member-email" name="team-member-email">
+      </div>
+      <div class="team-member">
+        <label for="team-member-phone">Phone:</label>
+        <input type="text" id="team-member-phone" name="team-member-phone">
+      </div>
+	  
+	  <div class="team-member">
+        <label for="team-member-reg-no">Student Reg. No (if student):</label>
+        <input type="text" id="team-member-reg-no" name="team-member-reg-no">
+      </div>
+      <div class="team-member">
+        <label for="team-member-institution">Institution:</label>
+        <input type="text" id="team-member-institution" name="team-member-institution">
+      </div>
+      <div class="team-member">
+        <label for="team-member-course">Degree/Course Pursuing:</label>
+        <input type="text" id="team-member-course" name="team-member-course">
+      </div>
+      <div class="team-member">
+        <label for="team-member-id-no">ID NO. (Non student):</label>
+        <input type="text" id="team-member-id-no" name="team-member-id-no">
+      </div>
+      <div class="team-member">
+        <label for="team-member-skills">Skills towards business:</label>
+        <input type="text" id="team-member-skills" name="team-member-skills">
+      </div>
+    
+    <button class="add-team-member" onclick="addTeamMember()">Add Team Member</button>
+</div> <br><br>
+    <div class="form-container">
+      <h4 style="color: black"> Business Details</h4>
+      <div><br>
+    <label for="business-stage">At what stage is your business? Tick appropriately:</label><br>
+    <input type="checkbox" id="idea-stage" name="business-stage" value="idea-stage">
+    <label for="idea-stage"style="display: inline-block">Idea</label>
+    <input type="checkbox" id="research-stage" name="business-stage" value="research-stage">
+    <label for="research-stage" style="display: inline-block">Research</label>
+    <input type="checkbox" id="prototype-stage" name="business-stage" value="prototype-stage">
+    <label for="prototype-stage" style="display: inline-block">Prototype</label>
+    <input type="checkbox" id="revenue-stage" name="business-stage" value="revenue-stage">
+    <label for="revenue-stage" style="display: inline-block">Revenue</label>
+    <input type="checkbox" id="scale-stage" name="business-stage" value="scale-stage">
+    <label for="scale-stage" style="display: inline-block">Scale</label>
+</div><br><br>
+
+<div>
+<label for="developed-prototype">If at prototype stage, have you developed a prototype?</label>
+<select id="developed-prototype" name="developed-prototype">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div><br><br>
+<div>
+  <label for="idea-protection">Have you protected your idea? Tick appropriately:</label><br>
+  <input type="checkbox" id="patent-protection" name="idea-protection" value="patent-protection">
+  <label for="patent-protection" style="display: inline-block">Patent</label>
+  <input type="checkbox" id="copyright-protection" name="idea-protection" value="copyright-protection">
+  <label for="copyright-protection" style="display: inline-block">Copyright</label>
+  <input type="checkbox" id="trademark-protection" name="idea-protection" value="trademark-protection">
+  <label for="trademark-protection" style="display: inline-block">Trademark</label>
+  <input type="checkbox" id="utility-model-protection" name="idea-protection" value="utility-model-protection">
+  <label for="utility-model-protection" style="display: inline-block">Utility Model</label>
+  <input type="checkbox" id="trade-secret-protection" name="idea-protection" value="trade-secret-protection">
+  <label for="trade-secret-protection" style="display: inline-block">Trade Secret</label>
+  <input type="checkbox" id="none-protection" name="idea-protection" value="none-protection">
+  <label for="none-protection" style="display: inline-block">None of the above</label>
+</div><br><br>
+
+<div>
+<label for="team-formed">Have you formed a team yet?</label>
+<select id="team-formed" name="team-formed">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div><br><br><br>
+<div>
+<label for="startup-registered">Is your startup registered?</label>
+<select id="startup-registered" name="startup-registered">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div><br><br><br>
+<div>
+<label for="funding-received">Have you received any funding previously?</label>
+<select id="funding-received" name="funding-received">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div><br><br><br>
+<div>
+<label for="incubator-accelerator">Are you currently incubated in another incubator/accelerator?</label>
+<select id="incubator-accelerator" name="incubator-accelerator">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div><br><br><br>
+<div>
+<label for="onboarded-partners">Have you onboarded any partners?</label>
+<select id="onboarded-partners" name="onboarded-partners">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div> <br><br><br>
+<div>
+  <label for="service-required">Kindly tick service your project will require:</label><br>
+  <input type="checkbox" id="office-space" name="service-required" value="office-space">
+  <label for="office-space" style="display: inline-block">Office Space</label><br>
+  <input type="checkbox" id="internet" name="service-required" value="internet">
+  <label for="internet" style="display: inline-block">Internet</label><br>
+  <input type="checkbox" id="ip-management" name="service-required" value="ip-management">
+  <label for="ip-management" style="display: inline-block">Intellectual Property Management</label><br>
+  <input type="checkbox" id="company-registration" name="service-required" value="company-registration">
+  <label for="company-registration" style="display: inline-block">Company registration</label><br>
+  <input type="checkbox" id="fabrication-services" name="service-required" value="fabrication-services">
+  <label for="fabrication-services" style="display: inline-block">Fabrication services</label><br>
+  <input type="checkbox" id="tech-commercialization" name="service-required" value="tech-commercialization">
+  <label for="tech-commercialization" style="display: inline-block">Technology Commercialization Assistance</label><br>
+</div><br><br><br>
+
+<div>
+  <label for="support-required">Kindly tick support your project will require:</label><br>
+  <input type="checkbox" id="networking" name="support-required" value="networking">
+  <label for="networking" style="display: inline-block">Networking</label><br>
+  <input type="checkbox" id="marketing" name="support-required" value="marketing">
+  <label for="marketing" style="display: inline-block">Marketing</label><br>
+  <input type="checkbox" id="financing-seed" name="support-required" value="financing-seed">
+  <label for="financing-seed" style="display: inline-block">Financing - Access to seed capital</label><br>
+  <input type="checkbox" id="financing-angel" name="support-required" value="financing-angel">
+  <label for="financing-angel" style="display: inline-block">Financing - Access to angel investor and capital venturists</label><br>
+  <input type="checkbox" id="regulatory-compliance" name="support-required" value="regulatory-compliance">
+  <label for="regulatory-compliance" style="display: inline-block">Assistance with regulatory compliance</label><br>
+  <input type="checkbox" id="higher-education-resources" name="support-required" value="higher-education-resources">
+  <label for="higher-education-resources" style="display: inline-block">Links to higher education resources and partners</label><br>
+  <input type="checkbox" id="mentorship" name="support-required" value="mentorship">
+  <label for="mentorship" style="display: inline-block">Mentorship</label><br>
+  <input type="checkbox" id="management-team" name="support-required" value="management-team">
+  <label for="management-team" style="display: inline-block">Management team identification</label><br>
+  <input type="checkbox" id="business-etiquettes" name="support-required" value="business-etiquettes">
+  <label for="business-etiquettes" style="display: inline-block">Help with business etiquettes</label><br>
+  <input type="checkbox" id="accounting-financial-management" name="support-required" value="accounting-financial-management">
+  <label for="accounting-financial-management" style="display: inline-block">Help with accounting and financial management</label><br>
+</div><br><br><br>
+
+<div>
+  <label for="training-required">Kindly tick training your project will require:</label><br>
+  <input type="checkbox" id="pitching-communications" name="training-required" value="pitching-communications">
+  <label for="pitching-communications" style="display: inline-block">Pitching and communications skills</label><br>
+  <input type="checkbox" id="design-thinking" name="training-required" value="design-thinking">
+  <label for="design-thinking" style="display: inline-block">Design thinking and lean startup</label><br>
+  <input type="checkbox" id="comprehensive-business-training" name="training-required" value="comprehensive-business-training">
+  <label for="comprehensive-business-training" style="display: inline-block">Comprehensive business trainings as offered by the centre</label><br>
+</div><br><br><br>
+<div>
+<label for="other-services">Kindly specify any other service/support/trainings that you may need:</label><br>
+<textarea id="other-services" name="other-services" rows="4" cols="50"></textarea>
+</div><br><br>
+<div>
+<label for="signature">Signature:</label>
+<input type="text" id="signature" name="signature">
+</div><br><br>
+<div>
+<label for="date">Date:</label>
+<input type="date" id="date" name="date">
+</div><br><br>
+
+
+<div class="button-container">
+<div class="submit-button">
+			<input type="submit" value="submit">
+		</div>
+<div class=" cancel-button">
+			<input type="submit" value="cancel">
+		</div>
+
+</div>
+</div>
+ 		
+  </form>
+  <script>
+    let teamMemberCount = 1;
+
+    function addTeamMember() {
+      const teamMemberContainer = document.createElement('div');
+      teamMemberContainer.classList.add('team-member');
+      teamMemberContainer.innerHTML = `
+        <label for="team-member-name-${teamMemberCount}">Name:</label>
+        <input type="text" id="team-member-name-${teamMemberCount}" name="team-member-name-${teamMemberCount}"><br>
+        <label for="team-member-email-${teamMemberCount}">Email:</label>
+        <input type="email" id="team-member-email-${teamMemberCount}" name="team-member-email-${teamMemberCount}"><br>
+        <label for="team-member-phone-${teamMemberCount}">Phone:</label>
+        <input type="text" id="team-member-phone-${teamMemberCount}" name="team-member-phone-${teamMemberCount}"><br>
+      `;
+      const addTeamMemberButton = document.querySelector('.add-team-member');
+      addTeamMemberButton.parentNode.insertBefore(teamMemberContainer, addTeamMemberButton);
+      teamMemberCount++;
+    }
+	
+	
+  </script>
+ 
+
+</body>
+</html>
